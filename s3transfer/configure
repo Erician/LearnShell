@@ -1,20 +1,13 @@
 [a]
-master = ''
-worker =
-job-type =
-src-filetype =
-src-absolutepath =
-src-file-list = 
-des-accesskey = 59E6DC72927457BDEBF36A56EE616B07
-des-secretkey = 00C835A41D17AAA11DFD53BE108BBD3B
-des-endpoint = http://s3.cn-north-1.jcloudcs.com
-des-bucketName = s31testbucket
-des-key = liuchaojie1
-task-size = 100
-task-filenumbers = 100
-round = 2
-transfer-is-continue = False
-check-time = now
+master = localhost:5252
+worker = 127.0.0.1:6262:False
+job-type = transfer
+[b]
+master = localhost:5253
+worker = 127.0.0.1:6263:True
+job-type = check
+
+
 
 
 

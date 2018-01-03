@@ -1,0 +1,12 @@
+1.shell脚本需要和s3transfer工具在同一个目录下
+2.首先需要配置configure文件
+[job-ID]:一个job的配置从[]开始了，[]中存放job-ID
+剩下的配置和在s3transfer中配置相同
+针对某个配置选项，如果您在configure未进行配置，我们将使用s3transfer中设置
+所有，使用该shell脚本最方便的方法是：您先在s3transfer中把相同的选项配置好，然后在configure中配置有差异的选项就行了。
+3.启动
+    为了让程序能在后台运行，建议您使用screen,过程如下：
+    screen -S my-screen
+    ./start.sh
+4.停止
+    ./stop.sh      #该脚本将停止所有的worker,master
